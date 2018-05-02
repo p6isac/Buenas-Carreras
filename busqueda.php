@@ -51,7 +51,7 @@
       </article>
     </section>
     <div style="width: 100vw; text-align: center; margin-top: 1em;">
-      <a href="./" class="btn" style='margin-top: 2em;'>Volver</a>
+      <a href="./filtro.php" class="btn" style='margin-top: 2em;'>Volver</a>
     </div>
 
     <script type="text/javascript">
