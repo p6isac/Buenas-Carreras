@@ -1,21 +1,38 @@
 <?php
   include "estados.php";
   include "escuelas.php";
+  include "carreras.php";
 ?>
 
+
 <!DOCTYPE html>
-<html lang="en" >
-
-<body>
-
+<html lang="es">
   <html>
 	<head>
-		<title>Buenos catalogos</title>
+		<title>Buenas Carreras</title>
 		<meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
 
     <script src="./js/autocomplete.js" charset="utf-8"></script>
+
+    <style>
+
+      #filtro{
+
+        background-image: url("Resources/Images/mapa2.jpg");
+     
+        background-size:cover;
+        background-repeat:   no-repeat;
+        background-position: center center; 
+        
+
+
+      }
+    
+
+  </style>
+
 	</head>
 
 	<body>
@@ -23,10 +40,10 @@
 
 		<section id="filtro" <?php if(!empty($_GET["estado"])) echo "class='filtrado'"; ?> >
 			<h2>Buscar por estado</h2>
-      <?php if(!empty($_GET["estado"])){echo "<h3>Mostrando solo esuelas de ".$estados[$_GET['estado']]."</h3>";} ?>
+      <?php if(!empty($_GET["estado"])){echo "<h3>Mostrando solo escuelas de ".$estados[$_GET['estado']]."</h3>";} ?>
       <form>
   			<select <?php if(empty($_GET["estado"])){echo "name='estado'";}else{echo "style='display:none;'";} ?> onchange='if(this.value != 0) { this.form.submit(); }'>
-          <option value="0">Seleccionar</option>
+          <option value="0" >Seleccionar</option>
           <?php
             foreach ($estados as $key => $value) {
               echo "<option value='$key'>$value</option>";
@@ -52,7 +69,7 @@
       			echo "	<p>";
       			echo $escuela["descripcion"];
       			echo "	</p>";
-            echo "<span>Ubicacion: ".$estados[$escuela["estado"]]."</span>";
+            echo "<span>Ubicación: ".$estados[$escuela["estado"]]."</span>";
       			echo "</article>";
           }
         }
