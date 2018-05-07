@@ -5,6 +5,7 @@ html, body{
   font-family: 'Roboto';
   background-color: #eee;
   overflow-x: hidden;
+
 }
 
 img{
@@ -18,6 +19,7 @@ header{
   position: fixed;
   top: 0;
   width: 100%;
+  
 }
 
 header a h1, header form input{
